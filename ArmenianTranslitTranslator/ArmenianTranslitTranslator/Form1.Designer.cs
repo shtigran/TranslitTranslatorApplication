@@ -67,9 +67,9 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(33, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(307, 23);
+            this.label3.Size = new System.Drawing.Size(311, 23);
             this.label3.TabIndex = 3;
-            this.label3.Text = "to translate into Armenian Translit";
+            this.label3.Text = "To translate into Armenian Translit";
             // 
             // Form1
             // 
