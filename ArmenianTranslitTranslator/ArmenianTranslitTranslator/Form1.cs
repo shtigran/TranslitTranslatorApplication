@@ -100,9 +100,10 @@ namespace ArmenianTranslitTranslator
 
         string text = sr.ReadToEnd();
 
-        textBox2.Text = text;
 
+        textBox2.Text = "The file translated";
 
+        textBox3.Text = text.ReplaceArmText();
 
       }
 
@@ -114,6 +115,16 @@ namespace ArmenianTranslitTranslator
      }
 
     private void textBox2_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void textBox3_TextChanged(object sender, EventArgs e)
     {
 
     }

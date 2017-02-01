@@ -36,13 +36,14 @@
       this.textBox1 = new System.Windows.Forms.TextBox();
       this.button1 = new System.Windows.Forms.Button();
       this.textBox2 = new System.Windows.Forms.TextBox();
+      this.textBox3 = new System.Windows.Forms.TextBox();
       this.SuspendLayout();
       // 
       // label1
       // 
       this.label1.AutoSize = true;
       this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label1.Location = new System.Drawing.Point(104, 88);
+      this.label1.Location = new System.Drawing.Point(104, 65);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(163, 23);
       this.label1.TabIndex = 1;
@@ -57,7 +58,7 @@
       this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.label2.Font = new System.Drawing.Font("Times Unicode", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-      this.label2.Location = new System.Drawing.Point(-5, 22);
+      this.label2.Location = new System.Drawing.Point(-5, 15);
       this.label2.Name = "label2";
       this.label2.Padding = new System.Windows.Forms.Padding(4);
       this.label2.Size = new System.Drawing.Size(395, 32);
@@ -69,7 +70,7 @@
       // 
       this.label3.AutoSize = true;
       this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label3.Location = new System.Drawing.Point(33, 122);
+      this.label3.Location = new System.Drawing.Point(33, 96);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(311, 23);
       this.label3.TabIndex = 3;
@@ -78,7 +79,7 @@
       // 
       // Select
       // 
-      this.Select.Location = new System.Drawing.Point(37, 178);
+      this.Select.Location = new System.Drawing.Point(37, 138);
       this.Select.Name = "Select";
       this.Select.Size = new System.Drawing.Size(82, 32);
       this.Select.TabIndex = 4;
@@ -89,7 +90,7 @@
       // textBox1
       // 
       this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.textBox1.Location = new System.Drawing.Point(226, 178);
+      this.textBox1.Location = new System.Drawing.Point(226, 138);
       this.textBox1.Multiline = true;
       this.textBox1.Name = "textBox1";
       this.textBox1.Size = new System.Drawing.Size(118, 32);
@@ -98,7 +99,7 @@
       // 
       // button1
       // 
-      this.button1.Location = new System.Drawing.Point(37, 240);
+      this.button1.Location = new System.Drawing.Point(37, 197);
       this.button1.Name = "button1";
       this.button1.Size = new System.Drawing.Size(82, 33);
       this.button1.TabIndex = 6;
@@ -109,12 +110,22 @@
       // textBox2
       // 
       this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.textBox2.Location = new System.Drawing.Point(226, 240);
+      this.textBox2.Location = new System.Drawing.Point(226, 197);
       this.textBox2.Multiline = true;
       this.textBox2.Name = "textBox2";
       this.textBox2.Size = new System.Drawing.Size(118, 33);
       this.textBox2.TabIndex = 7;
       this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+      // 
+      // textBox3
+      // 
+      this.textBox3.Location = new System.Drawing.Point(25, 250);
+      this.textBox3.Multiline = true;
+      this.textBox3.Name = "textBox3";
+      this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+      this.textBox3.Size = new System.Drawing.Size(332, 119);
+      this.textBox3.TabIndex = 8;
+      this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
       // 
       // Form1
       // 
@@ -123,6 +134,7 @@
       this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
       this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
       this.ClientSize = new System.Drawing.Size(380, 417);
+      this.Controls.Add(this.textBox3);
       this.Controls.Add(this.textBox2);
       this.Controls.Add(this.button1);
       this.Controls.Add(this.textBox1);
@@ -134,6 +146,7 @@
       this.Name = "Form1";
       this.Text = "Armenian Translit Translator";
       this.TopMost = true;
+      this.Load += new System.EventHandler(this.Form1_Load);
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -148,6 +161,7 @@
     private System.Windows.Forms.TextBox textBox1;
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox textBox3;
   }
 }
 
