@@ -102,9 +102,9 @@ namespace ArmenianTranslitTranslator
         string text = sr.ReadToEnd();
 
 
-        textBox2.Text = "The file translated";
-
-        textBox3.Text = text.ReplaceArmText();
+        textBox2.Text = "The file is translated";
+        
+        textBox3.Text = text.ReplaceArmText(); 
 
       }
 
@@ -129,5 +129,26 @@ namespace ArmenianTranslitTranslator
     {
 
     }
+
+    private void button2_Click(object sender, EventArgs e)
+    {
+      SaveFileDialog saveFileDialog = new SaveFileDialog();
+      saveFileDialog.Filter = "Текстовый документ (*.txt)|*.txt|Все файлы (*.*)|*.*";
+
+      if (saveFileDialog.ShowDialog() == DialogResult.OK)
+      {
+        StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName);
+        streamWriter.WriteLine(textBox3.Text);
+        streamWriter.Close();
+      }
+
+
+
+
+
+    }
+
+
+
   }
 }
