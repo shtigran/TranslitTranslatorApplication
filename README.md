@@ -119,5 +119,141 @@ This class allow You translate Armenian text into translit. It takes the text an
 
 ----
 
-### Program class implementation 
-This part take the location path of the file and copy the text into the string. The the method ReplaceArmText() of ReplaceArm class take it convert into translit and return to program. Then the program create the file and copy there the method returned text.
+### Form1 class implementation 
+```C# public partial class Form1 : Form
+  {
+
+    Stream myStream = null;
+    OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+    public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    private void Select_Click(object sender, EventArgs e)
+    {
+ 
+
+      openFileDialog1.InitialDirectory = "c:\\";
+      openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+      openFileDialog1.RestoreDirectory = true;
+      openFileDialog1.FilterIndex = 1;
+
+
+      if (openFileDialog1.ShowDialog() == DialogResult.OK)
+      {
+        try
+        {
+          if (openFileDialog1.OpenFile() != null)
+          {
+            if (openFileDialog1.SafeFileName.Contains(".txt"))
+            {
+              myStream = openFileDialog1.OpenFile();
+              textBox1.Text = "True file format (.txt)";             
+            }
+            else
+            {
+              textBox1.Text = "Wrong file format (file must has .txt extension), check it!";
+            }
+
+            
+          }
+        }
+        catch (Exception ex)
+        {
+          textBox1.Text = "This is a TextBox Error.";
+          MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+        }
+      }
+    }
+
+    private void label3_Click_1(object sender, EventArgs e)
+    {
+
+    }
+
+    private void textBox1_TextChanged(object sender, EventArgs e)
+    {
+      
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+
+      if (myStream  != null)
+      {
+
+        var sr = new StreamReader(myStream);
+
+        string text = sr.ReadToEnd();
+
+
+        textBox2.Text = "The file is translated";
+        
+        textBox3.Text = text.ReplaceArmText(); 
+
+      }
+
+      else 
+      {
+        textBox2.Text = "You dont select the file";
+      }
+
+     }
+
+    private void textBox2_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void textBox3_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void button2_Click(object sender, EventArgs e)
+    {
+      
+        SaveFileDialog saveFileDialog = new SaveFileDialog();
+        saveFileDialog.Filter = "Текстовый документ (*.txt)|*.txt|Все файлы (*.*)|*.*";
+        saveFileDialog.InitialDirectory = "c:\\";
+
+        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+        {
+          StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName);
+          streamWriter.WriteLine(textBox3.Text);
+          streamWriter.Close();
+        }   
+    }
+  }
+  ```
+----
+### Description of Form1 class
+There are several buttons and labels for interface. The application takes the file with the text and defines the file's configuration. The the client can Translate the text. After the the info appears, that alerts about translation result.
+In addition to that You can also save the text in another file.
