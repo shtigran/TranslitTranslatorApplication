@@ -34,6 +34,8 @@
       this.label3 = new System.Windows.Forms.Label();
       this.Select = new System.Windows.Forms.Button();
       this.textBox1 = new System.Windows.Forms.TextBox();
+      this.button1 = new System.Windows.Forms.Button();
+      this.textBox2 = new System.Windows.Forms.TextBox();
       this.SuspendLayout();
       // 
       // label1
@@ -87,12 +89,32 @@
       // textBox1
       // 
       this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.textBox1.Location = new System.Drawing.Point(200, 178);
+      this.textBox1.Location = new System.Drawing.Point(226, 178);
       this.textBox1.Multiline = true;
       this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(144, 32);
+      this.textBox1.Size = new System.Drawing.Size(118, 32);
       this.textBox1.TabIndex = 5;
       this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+      // 
+      // button1
+      // 
+      this.button1.Location = new System.Drawing.Point(37, 240);
+      this.button1.Name = "button1";
+      this.button1.Size = new System.Drawing.Size(82, 33);
+      this.button1.TabIndex = 6;
+      this.button1.Text = "Translate";
+      this.button1.UseVisualStyleBackColor = true;
+      this.button1.Click += new System.EventHandler(this.button1_Click);
+      // 
+      // textBox2
+      // 
+      this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.textBox2.Location = new System.Drawing.Point(226, 240);
+      this.textBox2.Multiline = true;
+      this.textBox2.Name = "textBox2";
+      this.textBox2.Size = new System.Drawing.Size(118, 33);
+      this.textBox2.TabIndex = 7;
+      this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
       // 
       // Form1
       // 
@@ -101,6 +123,8 @@
       this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
       this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
       this.ClientSize = new System.Drawing.Size(380, 417);
+      this.Controls.Add(this.textBox2);
+      this.Controls.Add(this.button1);
       this.Controls.Add(this.textBox1);
       this.Controls.Add(this.Select);
       this.Controls.Add(this.label3);
@@ -122,6 +146,8 @@
         private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Button Select;
     private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.TextBox textBox2;
   }
 }
 

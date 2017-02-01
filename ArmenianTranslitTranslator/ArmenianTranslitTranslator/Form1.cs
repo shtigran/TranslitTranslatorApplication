@@ -14,7 +14,11 @@ namespace ArmenianTranslitTranslator
 {
     public partial class Form1 : Form
     {
-        public Form1()
+
+    Stream myStream = null;
+    OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+    public Form1()
         {
             InitializeComponent();
         }
@@ -41,8 +45,7 @@ namespace ArmenianTranslitTranslator
 
     private void Select_Click(object sender, EventArgs e)
     {
-      Stream myStream = null;
-      OpenFileDialog openFileDialog1 = new OpenFileDialog();
+ 
 
       openFileDialog1.InitialDirectory = "c:\\";
       openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
@@ -54,16 +57,19 @@ namespace ArmenianTranslitTranslator
       {
         try
         {
-          if ((myStream = openFileDialog1.OpenFile()) != null)
+          if (openFileDialog1.OpenFile() != null)
           {
-            using (myStream)
+            if (openFileDialog1.SafeFileName.Contains(".txt"))
             {
-
-              if (openFileDialog1.SafeFileName.Contains(".txt"))
-                   textBox1.Text = "True file format (.txt)";
-              else textBox1.Text = "Wrong file format (file must has .txt extension), check it!";
-
+              myStream = openFileDialog1.OpenFile();
+              textBox1.Text = "True file format (.txt)";             
             }
+            else
+            {
+              textBox1.Text = "Wrong file format (file must has .txt extension), check it!";
+            }
+
+            
           }
         }
         catch (Exception ex)
@@ -85,6 +91,29 @@ namespace ArmenianTranslitTranslator
     }
 
     private void button1_Click(object sender, EventArgs e)
+    {
+
+      if (myStream  != null)
+      {
+
+        var sr = new StreamReader(myStream);
+
+        string text = sr.ReadToEnd();
+
+        textBox2.Text = text;
+
+
+
+      }
+
+      else 
+      {
+        textBox2.Text = "You dont select the file";
+      }
+
+     }
+
+    private void textBox2_TextChanged(object sender, EventArgs e)
     {
 
     }
