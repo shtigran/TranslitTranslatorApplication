@@ -121,7 +121,8 @@ This class allow You translate Armenian text into translit. It takes the text an
 
 ### Form1 class implementation 
 
-```C# public partial class Form1 : Form
+```C# 
+public partial class Form1 : Form
   {
 
     Stream myStream = null;
