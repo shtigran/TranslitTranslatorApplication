@@ -120,6 +120,7 @@ This class allow You translate Armenian text into translit. It takes the text an
 ----
 
 ### Form1 class implementation 
+
 ```C# public partial class Form1 : Form
   {
 
@@ -252,8 +253,9 @@ This class allow You translate Armenian text into translit. It takes the text an
         }   
     }
   }
-  ```
+ ```
 ----
+
 ### Description of Form1 class
 There are several buttons and labels for interface. The application takes the file with the text and defines the file's configuration. The the client can Translate the text. After the the info appears, that alerts about translation result.
 In addition to that You can also save the text in another file.
