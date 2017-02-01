@@ -7,7 +7,7 @@
 ![gif source](https://github.com/shtigran/TranslitTranslatorApplication/blob/master/TranslitTranslator.gif)
 
 ### Purpose
-Many Armenians in the world aren't able to understand armenian letters and armenian text. Many of them know armenian language, but don't know letters. This program allow inpute armenian text file and translate it into armenian translit in another output file, in order to who knows the armenian language, but doesn't know the armenian letters can read the text.
+Many Armenians in the World aren't able to understand Armenian letters and armenian text. Many of them know Armenian language, but don't know letters. This program allow inpute armenian text file and translate it into Armenian translit and save it in another output file, in order to that who knows the Armenian language, but doesn't know the Armenian letters can read the text.
 
 ----
 
@@ -115,4 +115,9 @@ public static class ReplaceArm
 ```
 
 ### Description of ReplaceArm class
-This class allow You translate Armenian text into translit.It takes the text and return translit text.
+This class allow You translate Armenian text into translit. It takes the text and return translit text.
+
+----
+
+### Program class implementation 
+This part take the location path of the file and copy the text into the string. The the method ReplaceArmText() of ReplaceArm class take it convert into translit and return to program. Then the program create the file and copy there the method returned text.
