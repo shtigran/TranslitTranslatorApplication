@@ -11,6 +11,7 @@ namespace ArmenianTranslitTranslator
 
     public static string ReplaceArmText(this string text)
     {
+     
       Dictionary<string, string> database = new Dictionary<string, string>();
       database.Add("ա", "a");
       database.Add("բ", "b");
@@ -41,6 +42,7 @@ namespace ArmenianTranslitTranslator
       database.Add("ջ", "j");
       database.Add("ռ", "r");
       database.Add("ս", "s");
+      database.Add("ւ", "v");
       database.Add("վ", "v");
       database.Add("տ", "t");
       database.Add("ր", "r");
@@ -68,9 +70,18 @@ namespace ArmenianTranslitTranslator
 
         if (char.ToLower(text[i]) <= 'z' && char.ToLower(text[i]) >= 'a')
         {
+          
           result += text[i].ToString();
           continue;
         }
+
+        if (char.ToLower(text[i]) <= 'а' && char.ToLower(text[i]) >= 'я')
+        {
+          
+          result += text[i].ToString();
+          continue;
+        }
+
         if (text[i].ToString() == "\n")
         {
           result += "\r\n";
