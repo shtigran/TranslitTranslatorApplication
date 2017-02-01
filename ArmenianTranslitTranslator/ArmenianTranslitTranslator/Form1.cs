@@ -132,20 +132,20 @@ namespace ArmenianTranslitTranslator
 
     private void button2_Click(object sender, EventArgs e)
     {
-      SaveFileDialog saveFileDialog = new SaveFileDialog();
-      saveFileDialog.Filter = "Текстовый документ (*.txt)|*.txt|Все файлы (*.*)|*.*";
+      
 
-      if (saveFileDialog.ShowDialog() == DialogResult.OK)
-      {
-        StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName);
-        streamWriter.WriteLine(textBox3.Text);
-        streamWriter.Close();
-      }
+        SaveFileDialog saveFileDialog = new SaveFileDialog();
+        saveFileDialog.Filter = "Текстовый документ (*.txt)|*.txt|Все файлы (*.*)|*.*";
+        saveFileDialog.InitialDirectory = "c:\\";
 
+        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+        {
+          StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName);
+          streamWriter.WriteLine(textBox3.Text);
+          streamWriter.Close();
+        }
 
-
-
-
+     
     }
 
 
