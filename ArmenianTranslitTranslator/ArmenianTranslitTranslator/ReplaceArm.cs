@@ -11,7 +11,6 @@ namespace ArmenianTranslitTranslator
 
     public static string ReplaceArmText(this string text)
     {
-     
       Dictionary<string, string> database = new Dictionary<string, string>();
       database.Add("ա", "a");
       database.Add("բ", "b");

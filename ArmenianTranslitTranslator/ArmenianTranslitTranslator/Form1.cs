@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using System.IO;
 
 
+
 namespace ArmenianTranslitTranslator
 {
     public partial class Form1 : Form
-    {
+  {
 
     Stream myStream = null;
     OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -87,7 +88,7 @@ namespace ArmenianTranslitTranslator
 
     private void textBox1_TextChanged(object sender, EventArgs e)
     {
-
+      
     }
 
     private void button1_Click(object sender, EventArgs e)

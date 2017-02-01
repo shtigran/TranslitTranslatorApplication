@@ -43,11 +43,11 @@
       // 
       this.label1.AutoSize = true;
       this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label1.Location = new System.Drawing.Point(104, 65);
+      this.label1.Location = new System.Drawing.Point(69, 63);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(163, 23);
+      this.label1.Size = new System.Drawing.Size(248, 23);
       this.label1.TabIndex = 1;
-      this.label1.Text = "Select the text file ";
+      this.label1.Text = "Select the text file (Unicode)";
       this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
       this.label1.UseWaitCursor = true;
       this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -70,7 +70,7 @@
       // 
       this.label3.AutoSize = true;
       this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label3.Location = new System.Drawing.Point(33, 96);
+      this.label3.Location = new System.Drawing.Point(38, 92);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(311, 23);
       this.label3.TabIndex = 3;
@@ -142,6 +142,7 @@
       this.Controls.Add(this.label3);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.label1);
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "Form1";
       this.Text = "Armenian Translit Translator";
