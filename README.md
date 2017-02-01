@@ -16,7 +16,6 @@ Many Armenians in the World aren't able to understand Armenian letters and armen
 ```c#
 public static class ReplaceArm
 {
-
     public static string ReplaceArmText(this string text)
   {
       Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -73,7 +72,6 @@ public static class ReplaceArm
             continue;
         }
       }
-
         if(char.ToLower(text[i]) <='z' && char.ToLower(text[i]) >= 'a')
       {
           result += text[i].ToString();
@@ -107,8 +105,7 @@ public static class ReplaceArm
       }
 
         flag = false;
-    }
-            
+    }          
       return result;
   }
 }
