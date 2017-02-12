@@ -1,6 +1,8 @@
 # Armenian Translit Translator Application
 # C#6.0  .NET FRAMEWORK 4.6
 ----
+![alt text](https://github.com/shtigran/TranslitTranslatorApplication/blob/master/Translit.png "Logo Title Text 1")
+
 
 ### Test and Result
 
