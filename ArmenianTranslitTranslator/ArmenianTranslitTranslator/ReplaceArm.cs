@@ -69,14 +69,14 @@ namespace ArmenianTranslitTranslator
 
         if (char.ToLower(text[i]) <= 'z' && char.ToLower(text[i]) >= 'a')
         {
-          
+
           result += text[i].ToString();
           continue;
         }
 
         if (char.ToLower(text[i]) <= 'а' && char.ToLower(text[i]) >= 'я')
         {
-          
+
           result += text[i].ToString();
           continue;
         }
